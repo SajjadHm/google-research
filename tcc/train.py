@@ -27,14 +27,14 @@ from absl import logging
 
 import tensorflow.compat.v2 as tf
 
-from tcc.algorithms import get_algo
-from tcc.config import CONFIG
-from tcc.datasets import create_dataset
-from tcc.utils import get_lr_fn
-from tcc.utils import get_lr_opt_global_step
-from tcc.utils import restore_ckpt
-from tcc.utils import setup_train_dir
-from tcc.utils import Stopwatch
+from algorithms import get_algo
+from config import CONFIG
+from datasets import create_dataset
+from utils import get_lr_fn
+from utils import get_lr_opt_global_step
+from utils import restore_ckpt
+from utils import setup_train_dir
+from utils import Stopwatch
 
 
 flags.DEFINE_string('logdir', '/tmp/alignment_logs', 'Path to logs.')
