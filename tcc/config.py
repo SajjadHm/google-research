@@ -1,5 +1,5 @@
 # coding=utf-8
-# Copyright 2024 The Google Research Authors.
+# Copyright 2023 The Google Research Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,14 +29,14 @@ CONFIG = edict()
 # ******************************************************************************
 
 # Directory for the experiment logs.
-CONFIG.LOGDIR = '/tmp/alignment_logs/'
+CONFIG.LOGDIR = '/kaggle/working/archery/tcc/tcc_log/'
 # Dataset for training alignment.
 # Check dataset_splits.py for full list.
 CONFIG.DATASETS = [
     # 'baseball_pitch',
     # 'baseball_swing',
-    # 'bench_press',
-    # 'bowling',
+    'archery',
+    # 'long_jump',
     # 'clean_and_jerk',
     # 'golf_swing',
     # 'jumping_jacks',
@@ -45,12 +45,12 @@ CONFIG.DATASETS = [
     # 'situp',
     # 'squats',
     # 'tennis_forehand',
-    # 'tennis_serve',
-    'pouring',
+    #  'tennis_serve',
+    #'pouring',
 ]
 
 # Path to tfrecords.
-CONFIG.PATH_TO_TFRECORDS = '/tmp/%s_tfrecords/'
+CONFIG.PATH_TO_TFRECORDS = '/kaggle/input/archeryucf/archery/%s_tfrecords/'
 # Algorithm used for training: alignment, sal, alignment_sal_tcn,
 # classification, tcn . (alignment is called tcc in paper)
 CONFIG.TRAINING_ALGO = 'alignment'
@@ -63,11 +63,11 @@ CONFIG.IMAGE_SIZE = 224  # For ResNet50
 
 # Number of training steps.
 CONFIG.TRAIN = edict()
-CONFIG.TRAIN.MAX_ITERS = 150000
+CONFIG.TRAIN.MAX_ITERS = 20000
 # Number of samples in each batch.
 CONFIG.TRAIN.BATCH_SIZE = 2
 # Number of frames to use while training.
-CONFIG.TRAIN.NUM_FRAMES = 20
+CONFIG.TRAIN.NUM_FRAMES = 5
 CONFIG.TRAIN.VISUALIZE_INTERVAL = 200
 
 # ******************************************************************************
@@ -87,10 +87,10 @@ CONFIG.EVAL.VAL_ITERS = 20
 # Provide a list of tasks using which the embeddings will be evaluated.
 CONFIG.EVAL.TASKS = [
     'algo_loss',
-    'classification',
+    #'classification',
     'kendalls_tau',
-    'event_completion',
-    'few_shot_classification'
+    #'event_completion',
+    #'few_shot_classification'
 ]
 
 CONFIG.EVAL.FRAMES_PER_BATCH = 25
@@ -123,7 +123,7 @@ CONFIG.MODEL.TRAIN_BASE = 'only_bn'
 CONFIG.MODEL.TRAIN_EMBEDDING = True
 
 # pylint: disable=line-too-long
-CONFIG.MODEL.RESNET_PRETRAINED_WEIGHTS = '/tmp/resnet50v2_weights_tf_dim_ordering_tf_kernels_notop.h5'
+CONFIG.MODEL.RESNET_PRETRAINED_WEIGHTS = '/kaggle/input/pretrainedmodel/resnet50v2_weights_tf_dim_ordering_tf_kernels_notop.h5'
 # pylint: enable=line-too-long
 
 # VGG_M-esque model
@@ -247,7 +247,7 @@ CONFIG.DATA.SAMPLING_STRATEGY = 'offset_uniform'  # offset_uniform, stride
 CONFIG.DATA.NUM_STEPS = 2  # number of frames that will be embedded jointly,
 CONFIG.DATA.FRAME_STRIDE = 15  # stride between context frames
 # Set this to False if your TFRecords don't have per-frame labels.
-CONFIG.DATA.FRAME_LABELS = True
+CONFIG.DATA.FRAME_LABELS = False
 CONFIG.DATA.PER_DATASET_FRACTION = 1.0  # Use 0 to use only one sample.
 CONFIG.DATA.PER_CLASS = False
 # stride of frames while embedding a video during evaluation.
