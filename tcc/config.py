@@ -53,7 +53,7 @@ CONFIG.DATASETS = [
 CONFIG.PATH_TO_TFRECORDS = '/kaggle/input/archeryucf/archery/%s_tfrecords/'
 # Algorithm used for training: alignment, sal, alignment_sal_tcn,
 # classification, tcn . (alignment is called tcc in paper)
-CONFIG.TRAINING_ALGO = 'alignment'
+CONFIG.TRAINING_ALGO = 'sal'
 # Size of images/frames.
 CONFIG.IMAGE_SIZE = 224  # For ResNet50
 
