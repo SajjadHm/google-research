@@ -93,7 +93,7 @@ def evaluate():
       keep_data=FLAGS.keep_data,
       keep_labels=FLAGS.keep_labels,
       max_embs=max_embs)
-  np.save(gfile.GFile(FLAGS.save_path, 'w'), embeddings)
+  np.save(gfile.GFile(FLAGS.save_path, 'w'), np.array(embeddings, dtype='object'))
 
 
 def main(_):
