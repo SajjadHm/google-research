@@ -71,7 +71,7 @@ def sample_batch(embs, batch_size, num_steps):
   indices = tf.stop_gradient(indices)
   embs = tf.tile(embs, [num_samples, 1, 1])
   embs = tf.gather(embs, indices, batch_dims=-1)
-  concat_embs = tf.squeeze(tf.concat(tf.split(embs, 3, axis=1), axis=-1),
+  concat_embs = tf.squeeze(tf.concat(tf.split(embs, 5, axis=1), axis=-1),
                            axis=1)
   return concat_embs, labels
 
