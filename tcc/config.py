@@ -29,7 +29,7 @@ CONFIG = edict()
 # ******************************************************************************
 
 # Directory for the experiment logs.
-CONFIG.LOGDIR = '/kaggle/working/archery/tcc/tcc_log/'
+CONFIG.LOGDIR = '/kaggle/working/archery/sal/sal_log/'
 # Dataset for training alignment.
 # Check dataset_splits.py for full list.
 CONFIG.DATASETS = [
