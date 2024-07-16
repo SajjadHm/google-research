@@ -50,7 +50,7 @@ CONFIG.DATASETS = [
 ]
 
 # Path to tfrecords.
-CONFIG.PATH_TO_TFRECORDS = '/kaggle/input/clean_and_jerkucf/clean_and_jerk/%s_tfrecords/'
+CONFIG.PATH_TO_TFRECORDS = '/kaggle/input/clean-and-jerkucf/clean_and_jerk/%s_tfrecords/'
 # Algorithm used for training: alignment, sal, alignment_sal_tcn,
 # classification, tcn . (alignment is called tcc in paper)
 CONFIG.TRAINING_ALGO = 'alignment'
