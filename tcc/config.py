@@ -29,7 +29,7 @@ CONFIG = edict()
 # ******************************************************************************
 
 # Directory for the experiment logs.
-CONFIG.LOGDIR = '/kaggle/working/clean_and_jerk/tcc/tcc_log/'
+CONFIG.LOGDIR = '/kaggle/working/clean_and_jerk/sal/sal_log/'
 # Dataset for training alignment.
 # Check dataset_splits.py for full list.
 CONFIG.DATASETS = [
@@ -53,7 +53,7 @@ CONFIG.DATASETS = [
 CONFIG.PATH_TO_TFRECORDS = '/kaggle/input/clean-and-jerkucf/clean_and_jerk/%s_tfrecords/'
 # Algorithm used for training: alignment, sal, alignment_sal_tcn,
 # classification, tcn . (alignment is called tcc in paper)
-CONFIG.TRAINING_ALGO = 'alignment'
+CONFIG.TRAINING_ALGO = 'sal'
 # Size of images/frames.
 CONFIG.IMAGE_SIZE = 224  # For ResNet50
 
