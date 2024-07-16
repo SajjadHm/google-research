@@ -16,12 +16,12 @@
 """List of subsets."""
 
 DATASETS = {
-    'archery': {'train': 91, 'val': 17},
+    # 'archery': {'train': 91, 'val': 17},
     # 'baseball_pitch': {'train': 103, 'val': 63},
     # 'baseball_swing': {'train': 113, 'val': 57},
     # 'bench_press': {'train': 113, 'val': 57},
     # 'bowling': {'train': 134, 'val': 84},
-    # 'clean_and_jerk': {'train': 40, 'val': 42},
+    'clean_and_jerk': {'train': 62, 'val': 24},
     # 'golf_swing': {'train': 87, 'val': 77},
     # 'jumping_jacks': {'train': 56, 'val': 56},
     # 'pushups': {'train': 102, 'val': 105},
@@ -34,12 +34,12 @@ DATASETS = {
 
 
 DATASET_TO_NUM_CLASSES = {
-    'archery': 5,
+    # 'archery': 5,
     # 'baseball_pitch': 4,
     # 'baseball_swing': 3,
     # 'bench_press': 2,
     # 'bowling': 3,
-    # 'clean_and_jerk': 6,
+    'clean_and_jerk': 6,
     # 'golf_swing': 3,
     # 'jumping_jacks': 4,
     # 'pushups': 2,
