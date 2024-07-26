@@ -29,19 +29,19 @@ CONFIG = edict()
 # ******************************************************************************
 
 # Directory for the experiment logs.
-CONFIG.LOGDIR = '/kaggle/working/long_jump/sal/sal_log/'
+CONFIG.LOGDIR = '/kaggle/working/pole_vault/tcc/tcc_log/'
 # Dataset for training alignment.
 # Check dataset_splits.py for full list.
 CONFIG.DATASETS = [
     # 'baseball_pitch',
     # 'field_hockey_penalty',
     # 'archery',
-    'long_jump',
+    # 'long_jump',
     # 'clean_and_jerk',
     # 'golf_swing',
     # 'hammer_throw',
     # 'javelin_throw',
-    # 'pullups',
+    'pole_vault',
     # 'situp',
     # 'squats',
     # 'tennis_forehand',
@@ -50,10 +50,10 @@ CONFIG.DATASETS = [
 ]
 
 # Path to tfrecords.
-CONFIG.PATH_TO_TFRECORDS = '/kaggle/input/long-jumpucf/long_jump/%s_tfrecords/'
+CONFIG.PATH_TO_TFRECORDS = '/kaggle/input/pole-vaultucf/pole_vault/%s_tfrecords/'
 # Algorithm used for training: alignment, sal, alignment_sal_tcn,
 # classification, tcn . (alignment is called tcc in paper)
-CONFIG.TRAINING_ALGO = 'sal'
+CONFIG.TRAINING_ALGO = 'alignment'
 # Size of images/frames.
 CONFIG.IMAGE_SIZE = 224  # For ResNet50
 
