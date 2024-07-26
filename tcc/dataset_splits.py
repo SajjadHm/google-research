@@ -26,8 +26,8 @@ DATASETS = {
     # 'jumping_jacks': {'train': 56, 'val': 56},
     # 'pushups': {'train': 102, 'val': 105},
     # 'pullups': {'train': 98, 'val': 100},
-    # 'situp': {'train': 50, 'val': 50},
-    'long_jump': {'train': 92, 'val': 39},
+    'pole_vault': {'train': 108, 'val': 40},
+    # 'long_jump': {'train': 92, 'val': 39},
     # 'javelin_throw': {'train': 86, 'val': 31},
     # 'hammer_throw': {'train': 105, 'val': 45},
 }
@@ -44,8 +44,8 @@ DATASET_TO_NUM_CLASSES = {
     # 'jumping_jacks': 4,
     # 'pushups': 2,
     # 'pullups': 2,
-    # 'situp': 2,
-    'long_jump': 4,
+    'pole_vault': 6,
+    # 'long_jump': 4,
     # 'hammer_throw': 3,
     # 'javelin_throw': 3,
 }
