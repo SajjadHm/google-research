@@ -28,8 +28,8 @@ DATASETS = {
     # 'pullups': {'train': 98, 'val': 100},
     # 'situp': {'train': 50, 'val': 50},
     # 'squats': {'train': 114, 'val': 115},
-    # 'tennis_forehand': {'train': 79, 'val': 74},
-    'hammer_throw': {'train': 105, 'val': 45},
+    'javelin_throw': {'train': 86, 'val': 31},
+    # 'hammer_throw': {'train': 105, 'val': 45},
 }
 
 
@@ -46,6 +46,6 @@ DATASET_TO_NUM_CLASSES = {
     # 'pullups': 2,
     # 'situp': 2,
     # 'squats': 4,
-    'hammer_throw': 3,
-    # 'tennis_serve': 4,
+    # 'hammer_throw': 3,
+    'javelin_throw': 3,
 }
