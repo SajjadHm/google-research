@@ -17,8 +17,8 @@
 
 DATASETS = {
     # 'archery': {'train': 91, 'val': 17},
-    'baseball_pitch': {'train': 107, 'val': 43},
-    # 'baseball_swing': {'train': 113, 'val': 57},
+    # 'baseball_pitch': {'train': 107, 'val': 43},
+    'field_hockey_penalty': {'train': 86, 'val': 40},
     # 'bench_press': {'train': 113, 'val': 57},
     # 'bowling': {'train': 134, 'val': 84},
     # 'clean_and_jerk': {'train': 62, 'val': 24},
@@ -35,8 +35,8 @@ DATASETS = {
 
 DATASET_TO_NUM_CLASSES = {
     # 'archery': 5,
-    'baseball_pitch': 4,
-    # 'baseball_swing': 3,
+    # 'baseball_pitch': 4,
+    'field_hockey_penalty': 4,
     # 'bench_press': 2,
     # 'bowling': 3,
     # 'clean_and_jerk': 6,
